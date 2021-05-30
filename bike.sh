@@ -9,5 +9,8 @@ echo $(whoami)
 echo
 #gives users in the system
 USERS=$(cat /etc/passwd | cut -d ":" -f 1)
-echo $USERS 
-echo $(hostname)
+echo $USERS
+#get ip addresses of the system
+ip=$(ifconfig)
+echo $ip
+
